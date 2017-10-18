@@ -58,7 +58,7 @@ class generator(QMdiSubWindow):
         self.genAPass.clicked.connect(self.randomAPass)
 
         self.label_5 = QtGui.QLabel(self.frame)
-        self.label_5.setGeometry(QtCore.QRect(10, 30, 131, 20))
+        self.label_5.setGeometry(QtCore.QRect(10, 35, 131, 20))
         self.label_5.setObjectName(_fromUtf8("label_5"))
 
         self.prCombo2 = QtGui.QComboBox(self.frame)
@@ -73,15 +73,17 @@ class generator(QMdiSubWindow):
         self.frame_2.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtGui.QFrame.Raised)
         self.frame_2.setObjectName(_fromUtf8("frame_2"))
-        self.Time = QtGui.QLineEdit(self.frame_2)
-        self.Time.setGeometry(QtCore.QRect(180, 10, 71, 31))
-        self.Time.setObjectName(_fromUtf8("Time"))
+        #self.Time = QtGui.QLineEdit(self.frame_2)
+        #self.Time.setGeometry(QtCore.QRect(180, 10, 71, 31))
+        #self.Time.setObjectName(_fromUtf8("Time"))
         self.tr = QtGui.QLineEdit(self.frame_2)
-        self.tr.setGeometry(QtCore.QRect(240, 50, 71, 31))
+        self.tr.setGeometry(QtCore.QRect(240, 30, 71, 31))
         self.tr.setObjectName(_fromUtf8("tr"))
+
         self.label_3 = QtGui.QLabel(self.frame_2)
-        self.label_3.setGeometry(QtCore.QRect(10, 55, 231, 20))
+        self.label_3.setGeometry(QtCore.QRect(10, 35, 231, 20))
         self.label_3.setObjectName(_fromUtf8("label_3"))
+
         self.multiThread = QtGui.QCheckBox(self.frame_2)
         self.multiThread.setEnabled(False)
         self.multiThread.setGeometry(QtCore.QRect(400, 5, 181, 25))
@@ -109,17 +111,17 @@ class generator(QMdiSubWindow):
         self.archiveCrack.setEnabled(False)
 
 
-        self.TimeCheck = QtGui.QCheckBox(self.frame_2)
-        self.TimeCheck.setGeometry(QtCore.QRect(10, 12, 171, 25))
-        self.TimeCheck.setObjectName(_fromUtf8("TimeCheck"))
+        #self.TimeCheck = QtGui.QCheckBox(self.frame_2)
+        #self.TimeCheck.setGeometry(QtCore.QRect(10, 12, 171, 25))
+        #self.TimeCheck.setObjectName(_fromUtf8("TimeCheck"))
         self.label_6 = QtGui.QLabel(self.frame_2)
-        self.label_6.setGeometry(QtCore.QRect(10, 100, 141, 20))
+        self.label_6.setGeometry(QtCore.QRect(10, 80, 141, 20))
         self.label_6.setObjectName(_fromUtf8("label_6"))
         self.Address = QtGui.QLineEdit(self.frame_2)
-        self.Address.setGeometry(QtCore.QRect(140, 95, 150, 32))
+        self.Address.setGeometry(QtCore.QRect(140, 75, 150, 32))
         self.Address.setObjectName(_fromUtf8("Address"))
         self.setAddr = QtGui.QPushButton(self.frame_2)
-        self.setAddr.setGeometry(QtCore.QRect(290, 95, 90, 28))
+        self.setAddr.setGeometry(QtCore.QRect(290, 75, 90, 28))
         self.setAddr.setObjectName(_fromUtf8("setAddr"))
         self.frame_3 = QtGui.QFrame(self)
         self.frame_3.setGeometry(QtCore.QRect(10, 30, 651, 231))
@@ -163,7 +165,7 @@ setMyOwn2="567"
         self.genData.setObjectName(_fromUtf8("genData"))
         self.genData.clicked.connect(self.generateDatabase)
         self.prCombo1 = QtGui.QComboBox(self.frame_4)
-        self.prCombo1.setGeometry(QtCore.QRect(110, 50, 121, 30))
+        self.prCombo1.setGeometry(QtCore.QRect(110, 50, 141, 30))
         self.prCombo1.setObjectName(_fromUtf8("prCombo1"))
         self.prCombo1.addItem(_fromUtf8(""))
         self.prCombo1.addItem(_fromUtf8(""))
@@ -181,7 +183,7 @@ setMyOwn2="567"
         self.checkBox_4.setText(_translate("MainWindow", "Use quantum randombit server", None))
         self.genPass.setText(_translate("MainWindow", "Generate strong password", None))
         self.genAPass.setText(_translate("MainWindow", "A random strong password", None))
-        self.Time.setText(_translate("MainWindow", "1", None))
+        #self.Time.setText(_translate("MainWindow", "1", None))
         self.tr.setText(_translate("MainWindow", "-35", None))
         self.label_3.setText(_translate("MainWindow", "Log_2 of each password probablity:", None))
         self.multiThread.setText(_translate("MainWindow", "Use multiThread by CPU", None))
@@ -189,7 +191,7 @@ setMyOwn2="567"
         self.multiHard.setText(_translate("MainWindow", "Use multiHardDisk", None))
         self.hashCrack.setText(_translate("MainWindow", "Crack hashes", None))
         self.archiveCrack.setText(_translate("MainWindow", "Crack archives", None))
-        self.TimeCheck.setText(_translate("MainWindow", "Time to stop (hourse):", None))
+        #self.TimeCheck.setText(_translate("MainWindow", "Time to stop (hourse):", None))
         self.label_6.setText(_translate("MainWindow", "Output file Address:", None))
         self.Address.setText(_translate("MainWindow", "output.txt", None))
         self.setAddr.setText(_translate("MainWindow", "SetAddress", None))
@@ -256,12 +258,12 @@ setMyOwn2="567"
 
         Vars=externExecutText(str(self.executText.toPlainText()))
 
-        try:
+        """try:
             self.T=float(str(self.Time.text()))
             print('t=',self.T)
         except Exception as a:
             sendErr('time of password generation must be a float. if you want to generate cantinusly enter 0.\n\t'+str(a))
-            return
+            return"""
 
         try:
             inp=str(self.input.text())
@@ -517,8 +519,10 @@ speed and earn the shortest time for dictionary generation.
 strong password
 ***Next version(s) such this version will be free and openSource.
 I will have been started the "ShutToPasswords v1" project after I get
-only 4.999$ in my bitcoin address. denote me (even 1$) and
+only 4.800$ in my bitcoin address. denote me (even 1$) and
 I make you most powerful cracker.
+
+my BTC: 1FDxQdMj26H41yUVW7KyCEyTyV5yRqZFPT
 
 ''', None))
         self.bitcoin=QtGui.QLineEdit('bitcoin',self)
